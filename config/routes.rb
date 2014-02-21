@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :skip => :registrations
   resources :users
 
   root to: 'users#index'
