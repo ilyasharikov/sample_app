@@ -64,4 +64,8 @@ SampleApp::Application.configure do
   # Log the query plan for queries taking more than this (works
   # with SQLite, MySQL, and PostgreSQL)
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
+
+  # Heroku requires false... before pushing to Heroku, run following at the command line:
+  #    ENV=production bundle exec rake assets:precompile
+  config.assets.initialize_on_precompile = false
 end
